@@ -30,3 +30,7 @@ function example() {
   // add more below as necessary.
 
 }
+
+function add(x, y) {
+  return x + y;
+}
