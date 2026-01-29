@@ -74,3 +74,9 @@ function compare(a,b){ //comparing 2 arrays compares the array references rather
   return (JSON.stringify(a) == JSON.stringify(b))? true:false 
 }
 
+function addToAll(arr,n){
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] += n;
+  }
+  return arr
+}
