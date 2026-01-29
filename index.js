@@ -39,5 +39,7 @@ function checkObject(obj){
 
 function checkObjectInside(obj){
   
-  obj.data.checked = true;
+  if (obj.data)
+    obj.data.checked = true;
 }
+
