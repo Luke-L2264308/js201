@@ -105,6 +105,16 @@ function addAllOpt(arr){
        total += arr[i];
       
     }
-    return total
+    return total;
   }
 }
+
+function divisors(arr,div){
+  let array = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]%div == 0) array.push(arr[i]);
+    
+  }
+  return array;
+}
+
