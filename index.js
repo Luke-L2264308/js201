@@ -118,3 +118,12 @@ function divisors(arr,div){
   return array;
 }
 
+function multiples(n,m){
+  let array = [];
+  for (let i = 1; i < n+1; i++) {
+    array.push(i*m);
+    
+  }
+  return array;
+}
+
