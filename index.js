@@ -80,3 +80,31 @@ function addToAll(arr,n){
   }
   return arr
 }
+
+let remembered = 0;
+function rememberThis(keepsake){
+  remembered = keepsake
+}
+
+function nArray(n){
+  const array = [];
+  for (let i = 0; i <n ; i++) {
+    array.push(i+1)
+    
+  }
+  return array
+}
+
+function addAllOpt(arr){
+  if (arr == null || arr.length == 0){
+    return 0;
+  }
+  else{
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+       total += arr[i];
+      
+    }
+    return total
+  }
+}
