@@ -59,12 +59,17 @@ function addAll(arr){
   for (let i = 0; i<arr.length; i++){
     result += arr[i]
   }
+
+  //for (const num of arr){
+  //  total += num;
+  //}
   return result
+  //return arr.reduce((sum,n) => sum+n,0)  '=>' creates a temporary function. Reduce happens at the os level
 }
 
 //Create a function called `larger` that accepts two numbers `a` and `b`, and returns the larger. 
 function larger(a,b){
-  return (a>b) ? a: b
+  return (a>b) ? a: b //the brackets are unnecessary
 }
 //Create a function called `largest` that accepts an array `arr` of numbers and returns the largest number in the array. 
 function largest(arr){
@@ -73,11 +78,15 @@ function largest(arr){
     (arr[i]>largest) ? largest = arr[i] : null; 
   }
   return largest
+  //return Math.max(...arr); does the same as the code above
+  //... breaks the array elements as individual structures and passes them as individual parameters
+
 
 }
 //Create a function called compare that accepts two arrays of numbers (`a` and `b`) and compares the contents. It should return true if the arrays are identical and false otherwise. 
 function compare(a,b){ //comparing 2 arrays compares the array references rather than their contents
   return (JSON.stringify(a) == JSON.stringify(b))? true:false 
+  //do this with 3 equals signs rather than 2, also no need for the true:false
 }
 
 //Create a function `addToAll` that accepts an array `arr` and a number `n` as parameters. Assuming an array of numbers is passed, return the same array with the second parameter added to each number within the array - such that ([1,2,3], 1) should return [2,3,4]. 
@@ -118,6 +127,8 @@ function addAllOpt(arr){
     }
     return total;
   }
+  //if (!arr || !arr.length) return 0;
+  //return addAll(arr);
 }
 
 //Write a function `divisors` that takes takes two parameters `arr` and `div`, an array of numbers and a divisor. Return a new array containing only the numbers in the first array that are exactly divisible by the second parameter. 
@@ -128,6 +139,7 @@ function divisors(arr,div){
     
   }
   return array;
+  //return arr.filter((num)=> !(num % div));
 }
 //Write a function `multiples` that takes two parameters `n` and `m`. It should return a new array of length `n` where the numbers inserted increase from 1*m to n*m. 
 function multiples(n,m){
